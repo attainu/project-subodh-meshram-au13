@@ -47,7 +47,6 @@ size by using the if and elif conditions and then arranging the files into their
 directories as per the size of the files. All the files are first moved into (Organized Directory) then inside this 
 folder all the other directories are created accordingly. files are arranged in the subsequent folders(BYTES,KB,MB,GB)
 
------------------------------------------------------------------------------------------------------------------------
 
 How To Run This Project File :
 -----------------------------------------------------------------------------------------------------------------------
