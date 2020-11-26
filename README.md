@@ -3,6 +3,7 @@ Python Project based on Junk File Organizer.
 -----------------------------------------------------------------------------------------------
 
 NEED :
+-----------------------------------------------------------------------------------------------
 I made this Project to simplify my file Organization in a specific folder, it takes a lot of time 
 to organize the different files in my system.
 
@@ -20,13 +21,15 @@ The code is built according to the standard pep8 rules and regulations.
 
 
 LIBRARIES USED :
+---------------------------------------------------------------------------------------------------------
 import os - to get all the files from the directories,to create directories.
 import shutil - to move the files from one directory to another.
 import datetime - to get the datetime the files are deployed in that directory.
 
----------------------------------------------------------------------------------------------------------
+
 
 APPROACH USED :
+------------------------------------------------------------------------------------------------------
 For Extension based organization - For the Extension based organization we have created a file types and saved all 
 the possible extensions I can think of to access the extensions and afterwords moving the files to their specified 
 directories. Checking the extension of the file in the computer directory and then compairing it with the dictionary 
@@ -45,6 +48,7 @@ folder all the other directories are created accordingly. files are arranged in 
 -----------------------------------------------------------------------------------------------------------------------
 
 How To Run This Project File :
+-----------------------------------------------------------------------------------------------------------------------
 1.Store the junk file in main.py file in your system anywhere you want.
 2.Go to terminal type python3 main.py "add path" "add option"example : extension,date,size.
 3.Hit the Enter and run button
