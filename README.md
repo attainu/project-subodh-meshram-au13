@@ -9,9 +9,8 @@ to organize the different files in my system.
 
 Technology Stack Used
 ​This project uses a number of open source tools, technologies and frameworks to work properly:​
-Visual Studio Code - A code editor redefined and optimized for building and debugging modern web and 
-cloud applications.
-Flake8 - static analysis of source code checking for symantec discrepancies
+Visual Studio Code - A code editor redefined and optimized for building and debugging modern web 
+and cloud applications.Flake8 - static analysis of source code checking for symantec discrepancies
 
 
 Built using:
