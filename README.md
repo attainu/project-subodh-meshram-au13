@@ -5,7 +5,7 @@ Python Project based on Junk File Organizer.
 NEED :
 I made this Project to simplify my file Organization in a specific folder, it takes a lot of time 
 to organize the different files in my system.
-
+----------------------------------------------------------------------------------------------------
 
 Technology Stack Used
 ​This project uses a number of open source tools, technologies and frameworks to work properly:​
@@ -23,7 +23,7 @@ import os - to get all the files from the directories,to create directories.
 import shutil - to move the files from one directory to another.
 import datetime - to get the datetime the files are deployed in that directory.
 
-
+---------------------------------------------------------------------------------------------------------
 
 APPROACH USED :
 For Extension based organization - For the Extension based organization we have created a file types and saved all 
@@ -41,6 +41,7 @@ size by using the if and elif conditions and then arranging the files into their
 directories as per the size of the files. All the files are first moved into (Organized Directory) then inside this 
 folder all the other directories are created accordingly. files are arranged in the subsequent folders(BYTES,KB,MB,GB)
 
+-----------------------------------------------------------------------------------------------------------------------
 
 How To Run This Project File :
 1.Store the junk file in main.py file in your system anywhere you want.
