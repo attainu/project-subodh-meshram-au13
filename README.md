@@ -23,7 +23,9 @@ The code is built according to the standard pep8 rules and regulations.
 LIBRARIES USED :
 ---------------------------------------------------------------------------------------------------------
 import os - to get all the files from the directories,to create directories.
+
 import shutil - to move the files from one directory to another.
+
 import datetime - to get the datetime the files are deployed in that directory.
 
 
