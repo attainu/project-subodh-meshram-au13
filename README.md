@@ -51,9 +51,7 @@ folder all the other directories are created accordingly. files are arranged in 
 How To Run This Project File :
 -----------------------------------------------------------------------------------------------------------------------
 1.Store the junk file in main.py file in your system anywhere you want.
-
 2.Go to terminal type python3 main.py "add path" "add option"example : extension,date,size.
-
 3.Hit the Enter and run button
 
 
