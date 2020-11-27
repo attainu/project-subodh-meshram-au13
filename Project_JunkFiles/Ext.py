@@ -2,7 +2,7 @@ import shutil
 import os
 
 
-def byExtension(path, Data, organizedPath):
+def Extension(path, Data, organizedPath):
     for data in Data:
         fileName = data[0]
         filePath = data[1]

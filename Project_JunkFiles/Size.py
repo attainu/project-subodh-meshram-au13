@@ -2,7 +2,7 @@ import os
 import shutil
 
 
-def bySize(path, Data, organizedPath):
+def Size(path, Data, organizedPath):
     for data in Data:
         fileName = data[0]
         filePath = data[1]

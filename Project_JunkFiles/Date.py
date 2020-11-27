@@ -4,7 +4,7 @@ import shutil
 import os
 
 
-def bydate(path, Data, organizedPath):
+def Date(path, Data, organizedPath):
 
     name = os.listdir(path)
     name.sort(key=lambda x: os.stat(os.path.join(path, x)).st_mtime)

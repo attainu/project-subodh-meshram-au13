@@ -1,9 +1,9 @@
 from stat import ST_SIZE
 import argparse
 import os
-import bysize
-import bydate
-import byext
+import Size
+import Date
+import Ext
 
 
 def main():
@@ -11,20 +11,19 @@ def main():
 
     # To get the path and options from the command line.
 
-    parameter.add_argument('--path', default="E:\\experiment\\dumpy4", 
-                           help='path to organize')
-    parameter.add_argument('-o', default='ext', help='Organize by', 
+    parameter.add_argument('--path', default='.', help='path to organize')
+    parameter.add_argument('-c', default='ext', help='ChoiceBy', 
                            choices=['ext', 'size', 'date', 'count'])
 
     args = parameter.parse_args()
-    organize(args)
+    Arrange(args)
 
 
 # recursively list out all the files.
 file_Data = []
 
 
-def get_Data(path):
+def Get_Data(path):
     for file in os.scandir(path):
         if not file.is_dir():
             fileName = file.name
@@ -33,11 +32,11 @@ def get_Data(path):
             fileSize = os.stat(filePath)[ST_SIZE]
             file_Data.append([fileName, filePath, fileExtension, fileSize])
         else:
-            file_Data + [data for data in (get_Data(file.path))]
+            file_Data + [data for data in (Get_Data(file.path))]
     return file_Data
 
 
-def countFiles(path, Data, organizedPath):
+def CountFiles(path, Data, organizedPath):
     total = 0
     for base, dirs, files in os.walk(path):
         print('Looking in : ', base)
@@ -45,16 +44,16 @@ def countFiles(path, Data, organizedPath):
             total += 1
             print(Files)
     print('Number of files', total)
-    print(dirs)    
+    print(dirs)
 
 
-def organize(args):
+def Arrange(args):
     path = args.path
-    organizeBy = args.o
+    ChoiceBy = args.c
 
     # For exception handling during wrong path input
     try:
-        Data = get_Data(path)
+        Data = Get_Data(path)
     except FileNotFoundError:
         print('Invalid path directory')
         return
@@ -63,17 +62,17 @@ def organize(args):
         os.makedirs(path + '/Arrange')
     organizedPath = path + '/Arrange/'
 
-    if organizeBy == 'ext':
-        byext.byExtension(path, Data, organizedPath)
-    elif organizeBy == 'size':
-        bysize.bySize(path, Data, organizedPath)
-    elif organizeBy == 'date':
-        bydate.bydate(path, Data, organizedPath)
-    elif organizeBy == 'count':
-        countFiles(path, Data, organizedPath)
+    OBJ_MAP = {
+        "ext": Ext.Extension,
+        "size": Size.Size,
+        "date": Date.Date,
+        "count": CountFiles
+        }
+    OBJ_MAP.get(ChoiceBy)(path, Data, organizedPath)
 
 
 print('Done')
+
 
 # Driver code
 
